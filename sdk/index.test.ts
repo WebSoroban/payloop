@@ -67,7 +67,7 @@ test('retries only confirmed failures', async () => {
   assert.equal(builds, 1);
 });
 
-// Live: simulates against the deployed testnet contract (read-only, no funds).
+// Live: simulates against the deployed testnet contract (read-only, no funds). 
 test('builds and reads against the testnet contract', { skip: !process.env.PAYLOOP_LIVE_TEST }, async () => {
   const deployment = (await import('../contract/deployments/testnet.json', { with: { type: 'json' } })).default;
   const client = createPayLoopClient({ network: 'testnet', contractId: deployment.contractId });
