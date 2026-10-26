@@ -5,7 +5,7 @@ Non-custodial USDC subscriptions on Stellar. A subscriber signs one policy
 first charge settles in the same transaction; a relayer submits each later
 charge when it is due. Funds stay in the subscriber's wallet until then, and
 the subscriber can pause, resume, or revoke at any time.
- 
+  
 | Path | What it is |
 | --- | --- |
 | [`contract/`](contract) | The Soroban contract (Rust, soroban-sdk 29), its tests, deployment manifests, and security review |
@@ -13,7 +13,7 @@ the subscriber can pause, resume, or revoke at any time.
 | [`examples/merchant/`](examples/merchant) | An Express server that unlocks content for active subscribers |
 
 ## Deployments
-
+ 
 | Network | Contract | Token |
 | --- | --- | --- |
 | Testnet | [`CCNMZWP2NQMTJF2J42W4DNYNOAQQYWOCJ2IQROXWYSJVOI3DKSH7YRIH`](https://stellar.expert/explorer/testnet/contract/CCNMZWP2NQMTJF2J42W4DNYNOAQQYWOCJ2IQROXWYSJVOI3DKSH7YRIH) | Circle test USDC |
@@ -24,9 +24,9 @@ Both run the same build (wasm `d42be154c35ac597792f41d83ccf1d70abd29edebdec135a4
 > **Mainnet status:** the contract has had an internal security review, and
 > every finding is fixed or documented in [`contract/AUDIT.md`](contract/AUDIT.md).
 > It has **not** been independently audited. Start with small amounts.
-
+ 
 ## How it works
-
+ 
 | Call | Signer | Effect |
 | --- | --- | --- |
 | `create_policy` | subscriber | Grants the USDC allowance and takes the first charge. Any failure reverts everything. |
