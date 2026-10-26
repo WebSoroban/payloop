@@ -11,7 +11,7 @@ submits the charges and its indexer serves the policies.
 ```bash
 cp .env.example .env
 ```
-
+ 
 - `PAYLOOP_NETWORK`: `testnet` (test USDC, the default) or `mainnet` (real Circle USDC).
 - `MERCHANT_ADDRESS`: the Stellar address you get paid at. It needs a USDC trustline on that network.
 - `PLAN_AMOUNT_USDC` and `PLAN_INTERVAL_SECONDS`: the plan a customer must hold.
