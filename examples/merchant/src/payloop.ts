@@ -15,7 +15,7 @@ export interface Policy {
   status: 'active' | 'paused' | 'revoked' | 'completed';
 }
 
-/** USDC has 7 decimals on Stellar; compare plan amounts in stroops, never floats.   */
+/** USDC has 7 decimals on Stellar; compare plan amounts in stroops, never floats. */
 export function toStroops(usdc: string): bigint {
   const [whole, fraction = ''] = usdc.trim().split('.');
   return BigInt(whole) * 10_000_000n + BigInt(fraction.padEnd(7, '0').slice(0, 7));
