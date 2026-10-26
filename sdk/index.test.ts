@@ -54,7 +54,7 @@ test('surfaces API errors', async (t) => {
   const client = createPayLoopClient({ network: 'mainnet', apiUrl: 'https://api.example.com/api' });
   await assert.rejects(client.contractId(), /not deployed on mainnet/);
 });
-
+ 
 test('retries only confirmed failures', async () => {
   const client = createPayLoopClient({ network: 'testnet', contractId: 'C' });
   let builds = 0;
