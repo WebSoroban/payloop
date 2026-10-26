@@ -1,4 +1,4 @@
-// Print every new PayLoop charge to this merchant as the relayer settles it.
+// Print every new PayLoop charge to this merchant as the relayer settles it. 
 import { merchantPolicies, type Policy } from '../src/payloop.js';
 
 const seen = new Map<string, number>();
