@@ -1,6 +1,6 @@
 /**
  * @web-soroban/payloop: non-custodial USDC subscriptions on Stellar network.
- *                                                                    
+ *                                                       
  * Build PayLoop contract calls for any Stellar wallet to sign, submit them,
  * and read policies and charges, on testnet or mainnet.                         
  */
