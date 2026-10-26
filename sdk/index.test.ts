@@ -3,12 +3,12 @@ import test from 'node:test';
 import { createHash } from 'node:crypto';
 import { Keypair, TransactionBuilder } from '@stellar/stellar-sdk';
 import { NETWORKS, PayLoopError, createPayLoopClient, formatUsdc, toStroops, verifyWalletSignature } from './index';
-
+ 
 test('prices policies in Circle USDC', () => {
   assert.equal(NETWORKS.testnet.usdc, 'CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA');
   assert.equal(NETWORKS.mainnet.usdc, 'CCW67TSZV3SSS2HXMBQ5JFGCKJNXKZM7UQUWUZPUTHXSTZLEO7SJMI75');
 });
-
+ 
 test('converts USDC amounts exactly', () => {
   assert.equal(toStroops('1'), 10_000_000n);
   assert.equal(toStroops('0.0000001'), 1n);
