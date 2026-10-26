@@ -10,13 +10,13 @@ app.get('/health', (_request, response) => {
   response.json({ ok: true, network: config.network, merchant: config.merchant });
 });
 
-// 1. The customer asks for a message to sign with their wallet.
+// 1. The customer asks for a message to sign with their wallet. 
 app.get('/api/challenge', (request, response) => {
   const wallet = String(request.query.wallet || '');
   response.json({ message: challengeFor(wallet) });
 });
 
-// 2. They send it back signed; access depends on an active PayLoop policy.
+// 2. They send it back signed; access depends on an active PayLoop policy. 
 app.post('/api/premium', async (request, response) => {
   const { wallet, message, signature } = request.body as { wallet?: string; message?: string; signature?: string };
   const problem = verifyWalletSignature(String(wallet || ''), String(message || ''), String(signature || ''));
@@ -41,7 +41,7 @@ app.post('/api/premium', async (request, response) => {
   }
 });
 
-// Merchant dashboard data: every active subscription paying this address.
+// Merchant dashboard data: every active subscription paying this address. 
 app.get('/api/subscribers', async (_request, response) => {
   try {
     const policies = await merchantPolicies('active');
