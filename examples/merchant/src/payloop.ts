@@ -35,7 +35,7 @@ export async function merchantPolicies(status?: Policy['status']): Promise<Polic
 }
 
 /**
- * The subscriber's active policy for this merchant's plan, or null.
+ * The subscriber's active policy for this merchant's plan, or null. 
  * A policy counts only if it pays this merchant the plan amount on the plan interval.
  */
 export async function activeSubscription(subscriber: string): Promise<Policy | null> {
