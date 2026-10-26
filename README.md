@@ -1,11 +1,11 @@
 # PayLoop
-
+ 
 Non-custodial USDC subscriptions on Stellar. A subscriber signs one policy
 (merchant, amount, interval, and a cap on the total) from their own wallet. The
 first charge settles in the same transaction; a relayer submits each later
 charge when it is due. Funds stay in the subscriber's wallet until then, and
 the subscriber can pause, resume, or revoke at any time.
-
+ 
 | Path | What it is |
 | --- | --- |
 | [`contract/`](contract) | The Soroban contract (Rust, soroban-sdk 29), its tests, deployment manifests, and security review |
